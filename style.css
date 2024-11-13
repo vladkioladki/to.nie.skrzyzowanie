@@ -1,0 +1,342 @@
+/* Reset and imports */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Pirata+One&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  cursor: url('path-to-image.png'), auto;
+}
+
+#postsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.post h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.post p {
+  font-size: 14px;
+  color: #555;
+}
+
+.post a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}
+
+.omg {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Header styles */
+.header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center; /* по умолчанию для больших экранов */
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  user-select: none;
+}
+
+.binary-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Помещаем его за контентом */
+}
+
+.title {
+  font-family: 'Pirata One', cursive;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  user-select: none;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #cccccc;
+}
+
+/* Content styles */
+.container {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 0rem;
+}
+#articles-container{
+padding-left: 200px;
+padding-right: 200px;
+}
+.article {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 2px solid #000000;
+  box-shadow: 8px 8px 0px #000000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit; /* Сохраняем цвет текста */
+  display: block; /* Делаем весь блок кликабельным */
+  width: 100%;
+}
+.article .preview {
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.article .full-content {
+  display: none;
+}
+
+.article:hover {
+  transform: translateX(-5px) translateY(-5px);
+  box-shadow: 17px 17px 0px #000000;
+}
+
+.article h2 {
+  font-family: 'Texturina';
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-meta {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.article-content {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+}
+        .decorative-line {
+            height: 2px;
+            background: #fff;
+            margin: 1.2rem auto;
+            width: 80%;
+            position: relative;
+        }
+
+        .decorative-line::before,
+        .decorative-line::after {
+            content: '†';
+            position: absolute;
+            font-family: 'UnifrakturMaguntia', cursive;
+            font-size: 2rem;
+            top: -1.5rem;
+            color: #fff;
+        }
+
+        .decorative-line::before { left: 0; }
+        .decorative-line::after { right: 0; }
+
+main {
+  flex-grow: 1; /* Это заставляет основной контент занимать всё доступное пространство */
+  padding: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  margin: 0 0.5rem;
+}
+
+/* Login page styling */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border: 2px solid #000000;
+}
+
+.login-container h2 {
+  margin-bottom: 1rem;
+}
+
+.login-container input, .login-container button {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+#login-message {
+  color: red;
+  margin-top: 1rem;
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .article {
+    padding: 1.5rem;
+    box-shadow: 5px 5px 0px #000000;
+  }
+
+  .article h2 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+  }
+
+  footer small {
+    font-size: 0.8rem;
+  }
+
+  .header-content {
+    justify-content: space-between; /* для мобильных экранов */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+}
+
+/* Animation for menu toggle */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
